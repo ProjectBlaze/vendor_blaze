@@ -107,6 +107,9 @@ ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
+# Include font files
+include vendor/blaze/config/fonts.mk
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
