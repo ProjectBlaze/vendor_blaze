@@ -56,7 +56,11 @@ endif
 # BootAnimation
 include vendor/blaze/config/bootanimation.mk
 
-# Blaze-specific init rc file
+# Some permissions
+PRODUCT_COPY_FILES += \
+    vendor/blaze/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+
+# blaze-specific init rc file
 PRODUCT_COPY_FILES += \
     vendor/blaze/prebuilt/common/etc/init/init.blaze-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.blaze-system_ext.rc
 
