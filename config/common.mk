@@ -50,6 +50,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
+# Some permissions
+PRODUCT_COPY_FILES += \
+    vendor/blaze/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.ntfs \
