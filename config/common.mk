@@ -94,6 +94,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Gapps
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 endif
 
 # Gboard side padding
