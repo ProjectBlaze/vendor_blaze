@@ -107,6 +107,13 @@ ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
+# Gboard side padding
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.kb_pad_port_l=4 \
+    ro.com.google.ime.kb_pad_port_r=4 \
+    ro.com.google.ime.kb_pad_land_l=64 \
+    ro.com.google.ime.kb_pad_land_r=64
+
 # Include font files
 include vendor/blaze/config/fonts.mk
 
