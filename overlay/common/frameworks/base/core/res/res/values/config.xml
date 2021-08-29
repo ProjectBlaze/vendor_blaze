@@ -192,4 +192,13 @@
        <item>app_cloning/delete_all_app_clones_enabled=true</item>
        <item>app_cloning/enable_app_cloning_building_blocks=true</item>
     </string-array>
+
+    <!-- Name of a font family to use for body text. -->
+    <string name="config_bodyFontFamily">sans-serif</string>
+    <string name="config_bodyFontFamilyMedium">sans-serif-medium</string>
+
+    <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
+    <string name="config_headlineFontFamily">google-sans</string>
+    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
 </resources>
