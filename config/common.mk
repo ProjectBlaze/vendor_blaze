@@ -214,6 +214,9 @@ PRODUCT_PACKAGES += \
     UdfpsResources
 endif
 
+# Themes
+$(call inherit-product, vendor/blaze/config/themes.mk)
+
 # ThemeOverlays
 include packages/overlays/Themes/themes.mk
 
