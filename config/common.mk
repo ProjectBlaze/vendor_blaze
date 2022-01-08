@@ -214,6 +214,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/blaze/build/target/product/security/blaze
 
+# Themes
+$(call inherit-product, vendor/blaze/config/themes.mk)
+
 # ThemeOverlays
 include packages/overlays/Themes/themes.mk
 
