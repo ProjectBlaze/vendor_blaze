@@ -54,6 +54,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/blaze/prebuilt/common/etc/init/init.blaze-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.blaze-system_ext.rc
 
+# App lock permission
+PRODUCT_COPY_FILES += \
+    vendor/blaze/config/permissions/privapp-permissions-settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-settings.xml
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/blaze/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
