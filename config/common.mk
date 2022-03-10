@@ -182,3 +182,6 @@ include vendor/blaze/config/bootanimation.mk
 
 # Audio
 $(call inherit-product, vendor/blaze/audio/audio.mk)
+
+# Packages
+include vendor/blaze/config/packages.mk
