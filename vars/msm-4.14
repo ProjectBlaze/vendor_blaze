@@ -1,6 +1,0 @@
-# Pixel 4, 4a
-
-# Updated manually
-
-readonly prev_kernel_tag=android-12.1.0_r0.2
-readonly kernel_tag=android-12.1.0_r0.13 # Apr 2022

@@ -1,38 +1,57 @@
-PRODUCT_VERSION_MAJOR = 19
-PRODUCT_VERSION_MINOR = 1
+# Copyright (C) 2022 ProjectBlaze
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-ifeq ($(LINEAGE_VERSION_APPEND_TIME_OF_DAY),true)
-    LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d_%H%M%S)
-else
-    LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d)
-endif
+ANDROID_VERSION := 12.0
+BLAZEVERSION := v1.0
 
-# Set LINEAGE_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
+BLAZE_BUILD_TYPE ?= UNOFFICIAL
+BLAZE_MAINTAINER ?= UNKNOWN
+BLAZE_DATE_YEAR := $(shell date -u +%Y)
+BLAZE_DATE_MONTH := $(shell date -u +%m)
+BLAZE_DATE_DAY := $(shell date -u +%d)
+BLAZE_DATE_HOUR := $(shell date -u +%H)
+BLAZE_DATE_MINUTE := $(shell date -u +%M)
+BLAZE_BUILD_DATE := $(BLAZE_DATE_YEAR)$(BLAZE_DATE_MONTH)$(BLAZE_DATE_DAY)-$(BLAZE_DATE_HOUR)$(BLAZE_DATE_MINUTE)
+TARGET_PRODUCT_SHORT := $(subst blaze_,,$(BLAZE_BUILD))
 
-ifndef LINEAGE_BUILDTYPE
-    ifdef RELEASE_TYPE
-        # Starting with "LINEAGE_" is optional
-        RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^LINEAGE_||g')
-        LINEAGE_BUILDTYPE := $(RELEASE_TYPE)
+# OFFICIAL_DEVICES
+ifeq ($(BLAZE_BUILD_TYPE), OFFICIAL)
+  LIST = $(shell cat vendor/blaze/blaze.devices)
+    ifeq ($(filter $(BLAZE_BUILD), $(LIST)), $(BLAZE_BUILD))
+      IS_OFFICIAL=true
+      BLAZE_BUILD_TYPE := OFFICIAL
+    endif
+    ifneq ($(IS_OFFICIAL), true)
+      BLAZE_BUILD_TYPE := UNOFFICIAL
+      $(error Device is not official "$(BLAZE_BUILD)")
     endif
 endif
 
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(LINEAGE_BUILDTYPE)),)
-    LINEAGE_BUILDTYPE := UNOFFICIAL
-    LINEAGE_EXTRAVERSION :=
-endif
+BLAZE_VERSION := $(BLAZEVERSION)-$(BLAZE_BUILD)-$(BLAZE_BUILD_DATE)-$(BLAZE_BUILD_TYPE)
+BLAZE_MOD_VERSION :=$(ANDROID_VERSION)-$(BLAZEVERSION)
+BLAZE_DISPLAY_VERSION := ProjectBlaze-$(BLAZEVERSION)-$(BLAZE_BUILD_TYPE)
+BLAZE_DISPLAY_BUILDTYPE := $(BLAZE_BUILD_TYPE)
+BLAZE_FINGERPRINT := ProjectBlaze/$(BLAZE_MOD_VERSION)/$(TARGET_PRODUCT_SHORT)/$(BLAZE_BUILD_DATE)
 
-ifeq ($(LINEAGE_BUILDTYPE), UNOFFICIAL)
-    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
-        LINEAGE_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
-    endif
-endif
-
-LINEAGE_VERSION_SUFFIX := $(LINEAGE_BUILD_DATE)-$(LINEAGE_BUILDTYPE)$(LINEAGE_EXTRAVERSION)-$(LINEAGE_BUILD)
-
-# Internal version
-LINEAGE_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_VERSION_SUFFIX)
-
-# Display version
-LINEAGE_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR)-$(LINEAGE_VERSION_SUFFIX)
+# BLAZE System Version
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+  ro.blaze.version=$(BLAZE_DISPLAY_VERSION) \
+  ro.blaze.build.status=$(BLAZE_BUILD_TYPE) \
+  ro.modversion=$(BLAZE_MOD_VERSION) \
+  ro.blaze.build.date=$(BLAZE_BUILD_DATE) \
+  ro.blaze.buildtype=$(BLAZE_BUILD_TYPE) \
+  ro.blaze.fingerprint=$(BLAZE_FINGERPRINT) \
+  ro.blaze.device=$(BLAZE_BUILD) \
+  org.blaze.version=$(BLAZEVERSION) \
+  ro.blaze.maintainer=$(BLAZE_MAINTAINER)

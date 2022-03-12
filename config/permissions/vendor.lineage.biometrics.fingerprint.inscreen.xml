@@ -12,5 +12,5 @@
 -->
 
 <permissions>
-    <feature name="android.sofware.nfc.beam" />
+    <feature name="vendor.lineage.biometrics.fingerprint.inscreen" />
 </permissions>

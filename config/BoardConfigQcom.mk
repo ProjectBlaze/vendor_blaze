@@ -11,7 +11,7 @@ LAHAINA := lahaina #SM8350
 B_FAMILY := msm8226 msm8610 msm8974
 B64_FAMILY := msm8992 msm8994
 BR_FAMILY := msm8909 msm8916
-UM_3_18_FAMILY := msm8937 msm8996
+UM_3_18_FAMILY := msm8937 msm8953 msm8996
 UM_4_4_FAMILY := msm8998 sdm660
 UM_4_9_FAMILY := sdm845 sdm710
 UM_4_14_FAMILY := $(MSMNILE) $(MSMSTEPPE) $(TRINKET) $(ATOLL)
@@ -19,12 +19,6 @@ UM_4_19_FAMILY := $(KONA) $(LITO) $(BENGAL)
 UM_5_4_FAMILY := $(LAHAINA)
 UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)
 QSSI_SUPPORTED_PLATFORMS := $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)
-
-ifeq (,$(TARGET_ENFORCES_QSSI))
-UM_3_18_FAMILY += msm8953
-else
-QSSI_SUPPORTED_PLATFORMS += msm8953
-endif
 
 BOARD_USES_ADRENO := true
 
@@ -37,7 +31,6 @@ SOONG_CONFIG_qtidisplay += \
     headless \
     llvmsa \
     gralloc4 \
-    udfps \
     default
 
 # Set default values for qtidisplay config
@@ -45,7 +38,6 @@ SOONG_CONFIG_qtidisplay_drmpp ?= false
 SOONG_CONFIG_qtidisplay_headless ?= false
 SOONG_CONFIG_qtidisplay_llvmsa ?= false
 SOONG_CONFIG_qtidisplay_gralloc4 ?= false
-SOONG_CONFIG_qtidisplay_udfps ?= false
 SOONG_CONFIG_qtidisplay_default ?= true
 
 # UM platforms no longer need this set on O+
@@ -105,7 +97,7 @@ ifneq ($(filter $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FA
 endif
 
 # List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996 $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY)
+MASTER_SIDE_CP_TARGET_LIST := msm8996 $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)
 
 ifneq ($(filter $(B_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     MSM_VIDC_TARGET_LIST := $(B_FAMILY)
@@ -132,10 +124,16 @@ else ifneq ($(filter $(UM_4_19_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     MSM_VIDC_TARGET_LIST := $(UM_4_19_FAMILY)
     QCOM_HARDWARE_VARIANT := sm8250
 else ifneq ($(filter $(UM_5_4_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+    MSM_VIDC_TARGET_LIST := $(UM_5_4_FAMILY)
     QCOM_HARDWARE_VARIANT := sm8350
 else
     MSM_VIDC_TARGET_LIST := $(TARGET_BOARD_PLATFORM)
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
+endif
+
+# Allow a device to manually override which HALs it wants to use
+ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
+QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
 endif
 
 # Allow a device to opt-out hardset of PRODUCT_SOONG_NAMESPACES
