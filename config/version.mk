@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ANDROID_VERSION := 12.0
+ANDROID_VERSION := 12.1
 BLAZEVERSION := v1.0
 
 BLAZE_BUILD_TYPE ?= UNOFFICIAL
