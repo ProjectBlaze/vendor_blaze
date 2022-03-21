@@ -1,2 +1,2 @@
-# Include LineageOS versions
-include $(TOPDIR)vendor/lineage/build/core/main_version.mk
+# Include ProjectBlaze versions
+include $(TOPDIR)vendor/blaze/build/core/main_version.mk
