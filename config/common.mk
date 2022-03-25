@@ -186,6 +186,9 @@ $(call inherit-product, vendor/blaze/audio/audio.mk)
 # Packages
 include vendor/blaze/config/packages.mk
 
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
+
 #Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
