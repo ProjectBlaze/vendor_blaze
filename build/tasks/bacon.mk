@@ -16,7 +16,7 @@
 # -----------------------------------------------------------------
 # BLAZE OTA update package
 
-BLAZE_TARGET_PACKAGE := $(PRODUCT_OUT)/blaze-$(BLAZE_VERSION).zip
+BLAZE_TARGET_PACKAGE := $(PRODUCT_OUT)/Blaze-$(BLAZE_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
