@@ -1,12 +1,12 @@
 # Platform names
-KONA := kona #SM8250
-LITO := lito #SM7250
-BENGAL := bengal #SM6115
-MSMNILE := msmnile #SM8150
-MSMSTEPPE := sm6150
-TRINKET := trinket #SM6125
-ATOLL := atoll #SM6250
-LAHAINA := lahaina #SM8350
+KONA ?= kona #SM8250
+LITO ?= lito #SM7250
+BENGAL ?= bengal #SM6115
+MSMNILE ?= msmnile #SM8150
+MSMSTEPPE ?= sm6150
+TRINKET ?= trinket #SM6125
+ATOLL ?= atoll #SM6250
+LAHAINA ?= lahaina #SM8350
 
 B_FAMILY := msm8226 msm8610 msm8974
 B64_FAMILY := msm8992 msm8994
@@ -20,6 +20,10 @@ UM_5_4_FAMILY := $(LAHAINA)
 UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)
 QSSI_SUPPORTED_PLATFORMS := $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)
 
+ifeq ($(TARGET_USES_UM_4_19),true)
+    QSSI_SUPPORTED_PLATFORMS += $(TARGET_BOARD_PLATFORM)
+endif
+
 BOARD_USES_ADRENO := true
 
 # Add qtidisplay to soong config namespaces
@@ -31,6 +35,7 @@ SOONG_CONFIG_qtidisplay += \
     headless \
     llvmsa \
     gralloc4 \
+    udfps \
     default
 
 # Set default values for qtidisplay config
@@ -38,6 +43,7 @@ SOONG_CONFIG_qtidisplay_drmpp ?= false
 SOONG_CONFIG_qtidisplay_headless ?= false
 SOONG_CONFIG_qtidisplay_llvmsa ?= false
 SOONG_CONFIG_qtidisplay_gralloc4 ?= false
+SOONG_CONFIG_qtidisplay_udfps ?= false
 SOONG_CONFIG_qtidisplay_default ?= true
 
 # UM platforms no longer need this set on O+
