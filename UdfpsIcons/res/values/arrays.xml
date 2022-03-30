@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+   <string-array name="udfps_icons" translatable="false">
+        <item>udfps_icon_1</item>
+        <item>udfps_icon_2</item>
+        <item>udfps_icon_3</item>
+        <item>udfps_icon_4</item>
+        <item>udfps_icon_5</item>
+        <item>udfps_icon_6</item>
+        <item>udfps_icon_7</item>
+        <item>udfps_icon_8</item>
+        <item>udfps_icon_9</item>
+        <item>udfps_icon_10</item>
+        <item>udfps_icon_11</item>
+        <item>udfps_icon_12</item>
+   </string-array>
+
+</resources>

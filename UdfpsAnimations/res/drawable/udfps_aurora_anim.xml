@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_1" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_2" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_3" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_4" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_5" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_6" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_7" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_8" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_9" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_10" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_11" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_12" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_13" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_14" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_15" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_16" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_17" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_18" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_19" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_20" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_21" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_22" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_23" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_24" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_25" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_26" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_27" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_28" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_29" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_30" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_31" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_32" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_33" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_34" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_35" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_36" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_37" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_38" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_39" />
+    <item android:duration="6" android:drawable="@drawable/udfps_aurora_40" />
+</animation-list>
