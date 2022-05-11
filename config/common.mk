@@ -186,6 +186,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/blaze/config/partner_gms.mk
 
