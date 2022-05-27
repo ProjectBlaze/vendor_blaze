@@ -5,3 +5,7 @@ PRODUCT_PACKAGES += \
 # GameSpace
 PRODUCT_PACKAGES += \
     GameSpace
+
+# OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws
