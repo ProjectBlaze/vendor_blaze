@@ -247,6 +247,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/blaze/overlay/common \
 
 PRODUCT_PACKAGES += \
+    CustomFontPixelLauncherOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
