@@ -223,8 +223,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Lawnchair
-TARGET_BUILD_LAWNCHAIR ?= true
-ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
+ifneq ($(WITH_GAPPS), true)
 include vendor/lawnchair/lawnchair.mk
 endif
 
