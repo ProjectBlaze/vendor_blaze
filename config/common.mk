@@ -114,7 +114,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Gapps
 ifeq ($(WITH_GAPPS),true)
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
 
 # Optimize everything for preopt
