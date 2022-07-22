@@ -1,7 +1,8 @@
 # Required packages
 PRODUCT_PACKAGES += \
     ThemePicker \
-    WeatherIcons
+    WeatherIcons \
+    TouchGestures
 
 # GameSpace
 PRODUCT_PACKAGES += \
