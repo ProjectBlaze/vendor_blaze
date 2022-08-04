@@ -36,6 +36,7 @@ SOONG_CONFIG_blazeGlobalVars += \
     camera_needs_miui_camera_mode_support \
     camera_needs_camera_needs_depth_sensor_override \
     gralloc_handle_has_reserved_size \
+    target_alternative_futex_waiters \
     target_health_charging_control_charging_path \
     target_health_charging_control_charging_enabled \
     target_health_charging_control_charging_disabled \
@@ -97,6 +98,7 @@ SOONG_CONFIG_blazeGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA
 SOONG_CONFIG_blazeGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_blazeGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_blazeGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
+SOONG_CONFIG_blazeGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
