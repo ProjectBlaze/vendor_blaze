@@ -1,7 +1,8 @@
 # Required packages
 PRODUCT_PACKAGES += \
     ThemePicker \
-    TouchGestures
+    TouchGestures \
+    RepainterServicePriv
 
 # GameSpace
 PRODUCT_PACKAGES += \
