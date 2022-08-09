@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     ThemesStub \
     TouchGestures \
     BlazeWallpaperStub \
-    Aperture
+    Aperture \
+    RepainterServicePriv
 
 # GameSpace
 PRODUCT_PACKAGES += \
