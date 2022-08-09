@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     ThemePicker \
     WeatherIcons \
-    TouchGestures
+    TouchGestures \
+    RepainterServicePriv
 
 # GameSpace
 PRODUCT_PACKAGES += \
