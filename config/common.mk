@@ -117,9 +117,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
 # Gapps
-ifeq ($(WITH_GAPPS),true)
-$(call inherit-product, vendor/gms/products/gms.mk)
-endif
+##ifeq($(WITH_GAPPS),true)
+#$(call inherit-product, vendor/gms/products/gms.mk)
+#endif
 
 # Optimize everything for preopt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
