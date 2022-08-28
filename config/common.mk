@@ -219,7 +219,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     AndroidBlackThemeOverlay \
-    NetworkStackOverlay
+    NetworkStackOverlay \
+    ThemedIconsOverlay
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/blaze/build/target/product/security/blaze
