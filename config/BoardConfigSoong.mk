@@ -54,7 +54,6 @@ SOONG_CONFIG_NAMESPACES += blazeQcomVars
 SOONG_CONFIG_blazeQcomVars += \
     supports_extended_compress_format \
     uses_pre_uplink_features_netmgrd \
-    uses_qcom_bsp_legacy \
     uses_qti_camera_device
 
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
@@ -73,7 +72,6 @@ SOONG_CONFIG_blazeGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NE
 SOONG_CONFIG_blazeNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_blazeQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_blazeQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
-SOONG_CONFIG_blazeQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
 SOONG_CONFIG_blazeQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
 SOONG_CONFIG_blazeGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_blazeGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
