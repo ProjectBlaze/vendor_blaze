@@ -32,7 +32,6 @@ SOONG_CONFIG_blazeGlobalVars += \
     camera_needs_client_info \
     camera_needs_client_info_lib \
     gralloc_handle_has_reserved_size \
-    has_legacy_camera_hal1 \
     needs_camera_boottime \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -56,7 +55,6 @@ SOONG_CONFIG_blazeQcomVars += \
 endif
 
 # Soong bool variables
-SOONG_CONFIG_blazeGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_blazeGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_blazeNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_blazeQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
