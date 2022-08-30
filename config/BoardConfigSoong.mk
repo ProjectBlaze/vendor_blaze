@@ -30,7 +30,6 @@ SOONG_CONFIG_NAMESPACES += blazeGlobalVars
 SOONG_CONFIG_blazeGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
-    disable_postrender_cleanup \
     camera_needs_client_info \
     camera_needs_client_info_lib \
     gralloc_handle_has_reserved_size \
@@ -59,7 +58,6 @@ SOONG_CONFIG_blazeQcomVars += \
 endif
 
 # Soong bool variables
-SOONG_CONFIG_blazeGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_blazeGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_blazeGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_blazeNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
