@@ -192,4 +192,7 @@
        <item>app_cloning/delete_all_app_clones_enabled=true</item>
        <item>app_cloning/enable_app_cloning_building_blocks=true</item>
     </string-array>
+
+    <!-- Fingerprint from a certified device -->
+    <string name="config_certifiedFingerprint" translatable="false">google/husky/husky:14/UD1A.230803.041/10808477:user/release-keys</string>
 </resources>
