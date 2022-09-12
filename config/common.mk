@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # ThemeOverlays
-#include packages/overlays/Themes/themes.mk
+include packages/overlays/Themes/themes.mk
 
 #Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
