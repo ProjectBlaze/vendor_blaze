@@ -68,6 +68,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/blaze/config/permissions/privapp-permissions-settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-settings.xml
 
+# Blurs
+ifeq ($(TARGET_SUPPORTS_BLUR),true)
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+endif
+
+# Disable blur on app-launch
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=0
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/blaze/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
