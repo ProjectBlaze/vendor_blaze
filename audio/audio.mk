@@ -34,6 +34,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/notifications/material_simple-celebration_1.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/material_simple-celebration_1.ogg \
     $(LOCAL_PATH)/notifications/material_simple-celebration_2.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/material_simple-celebration_2.ogg \
     $(LOCAL_PATH)/notifications/material_simple-celebration_3.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/material_simple-celebration_3.ogg \
+    $(LOCAL_PATH)/notifications/Pikachu.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Pikachu.ogg \
     $(LOCAL_PATH)/ringtones/material_minimal.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/material_minimal.ogg \
     $(LOCAL_PATH)/ringtones/vibe.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/vibe.ogg \
 
