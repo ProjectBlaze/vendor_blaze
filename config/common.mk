@@ -221,4 +221,5 @@ include vendor/blaze/config/version.mk
 
 # Sounds (default)
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.config.ringtone=vibe.ogg
+    ro.config.ringtone=vibe.ogg \
+    ro.config.notification_sound=Pikachu.ogg
