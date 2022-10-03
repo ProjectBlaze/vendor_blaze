@@ -20,6 +20,7 @@ $(call inherit-product, frameworks/base/data/sounds/AudioPackage14.mk)
 LOCAL_PATH := vendor/blaze/audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/alarms/material_gentle.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/material_gentle.ogg \
+    $(LOCAL_PATH)/alarms/MorningAlarm.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/MorningAlarm.ogg \
     $(LOCAL_PATH)/notifications/material_ambient.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/material_ambient.ogg \
     $(LOCAL_PATH)/notifications/material_decorative_1.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/material_decorative_1.ogg \
     $(LOCAL_PATH)/notifications/material_decorative_2.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/material_decorative_2.ogg \
