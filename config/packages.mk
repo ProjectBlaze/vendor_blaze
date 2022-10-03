@@ -1,6 +1,9 @@
 # Required packages
 PRODUCT_PACKAGES += \
-    TouchGestures \
+    TouchGestures
+
+# Repainter integration
+PRODUCT_PACKAGES += \
     RepainterServicePriv
 
 # GameSpace
