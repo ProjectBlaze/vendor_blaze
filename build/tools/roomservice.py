@@ -45,8 +45,8 @@ except ImportError:
 DEBUG = True
 
 custom_local_manifest = ".repo/local_manifests/blaze.xml"
-custom_default_revision = "12.1"
-custom_github_revision = "twelve"
+custom_default_revision = "13"
+custom_github_revision = "thirteen"
 custom_dependencies = "blaze.dependencies"
 org_manifest = "ProjectBlaze-Devices"  # leave empty if org is provided in manifest
 org_display = "ProjectBlaze-Devices"  # needed for displaying
