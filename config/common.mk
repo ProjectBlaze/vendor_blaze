@@ -123,6 +123,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Gapps
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+    PIXEL_LAUNCHER_VARIANT := fullmod1
+    ICONS_VARIANT := true
 endif
 
 # Optimize everything for preopt
