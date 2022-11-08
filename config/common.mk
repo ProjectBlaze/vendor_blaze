@@ -212,11 +212,6 @@ $(call inherit-product, vendor/blaze/audio/audio.mk)
 # Packages
 include vendor/blaze/config/packages.mk
 
-ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
-PRODUCT_PACKAGES += \
-    UdfpsResources
-endif
-
 # Themes
 $(call inherit-product, vendor/blaze/config/themes.mk)
 
