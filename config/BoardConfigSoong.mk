@@ -35,6 +35,8 @@ SOONG_CONFIG_blazeGlobalVars += \
     gralloc_handle_has_custom_content_md_reserved_size \
     camera_needs_miui_camera_mode_support \
     camera_needs_camera_needs_depth_sensor_override \
+    disable_bluetooth_le_read_buffer_size_v2 \
+    disable_bluetooth_le_set_host_feature \
     gralloc_handle_has_reserved_size \
     target_alternative_futex_waiters \
     target_health_charging_control_charging_path \
@@ -136,6 +138,8 @@ SOONG_CONFIG_blazeGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACE
 SOONG_CONFIG_blazeGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_USB_CONTROL_PATH)
 SOONG_CONFIG_blazeGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_blazeGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
+SOONG_CONFIG_blazeGlobalVars_disable_bluetooth_le_read_buffer_size_v2 := $(TARGET_DISABLE_BLUETOOTH_LE_READ_BUFFER_SIZE_V2)
+SOONG_CONFIG_blazeGlobalVars_disable_bluetooth_le_set_host_feature := $(TARGET_DISABLE_BLUETOOTH_LE_SET_HOST_FEATURE)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_blazeQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
