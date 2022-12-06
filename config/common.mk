@@ -73,10 +73,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/blaze/config/permissions/privapp-permissions-settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-settings.xml
 
-# Call Recording
-PRODUCT_COPY_FILES += \
-    vendor/blaze/config/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
-
 # Blurs
 ifeq ($(TARGET_SUPPORTS_BLUR),true)
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
