@@ -12,3 +12,7 @@ PRODUCT_PACKAGES += \
 # OmniJaws
 PRODUCT_PACKAGES += \
     OmniJaws
+
+# Combined icons
+PRODUCT_PACKAGES += \
+    CombinedIconsOverlay
