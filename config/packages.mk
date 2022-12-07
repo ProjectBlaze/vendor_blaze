@@ -7,3 +7,7 @@ PRODUCT_PACKAGES += \
 # GameSpace
 PRODUCT_PACKAGES += \
     GameSpace
+
+# Combined icons
+PRODUCT_PACKAGES += \
+    CombinedIconsOverlay
