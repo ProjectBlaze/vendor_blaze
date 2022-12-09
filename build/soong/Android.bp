@@ -123,23 +123,6 @@ gralloc_10_usage_bits {
 }
 
 soong_config_module_type {
-    name: "target_process_sdk_version_overrides",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    value_variables: ["target_process_sdk_version_override"],
-    properties: ["cppflags"],
-}
-
-target_process_sdk_version_overrides {
-    name: "process_sdk_version_overrides_defaults",
-    soong_config_variables: {
-        target_process_sdk_version_override: {
-            cppflags: ["-DSDK_VERSION_OVERRIDES=\"%s\""],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "gralloc_handle_reserved_size",
     module_type: "cc_defaults",
     config_namespace: "blazeGlobalVars",
@@ -239,23 +222,6 @@ trust_usb_control {
 }
 
 soong_config_module_type {
-    name: "ignores_ftp_pptp_conntrack_failure_defaults",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    bool_variables: ["ignores_ftp_pptp_conntrack_failure"],
-    properties: ["cppflags"],
-}
-
-ignores_ftp_pptp_conntrack_failure_defaults {
-    name: "ignores_ftp_pptp_conntrack_failure",
-    soong_config_variables: {
-        ignores_ftp_pptp_conntrack_failure: {
-            cppflags: ["-DIGNORES_FTP_PPTP_CONNTRACK_FAILURE"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "needs_camera_boottime",
     module_type: "cc_defaults",
     config_namespace: "blazeGlobalVars",
@@ -268,141 +234,6 @@ needs_camera_boottime {
     soong_config_variables: {
         needs_camera_boottime: {
             cppflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "needs_netd_direct_connect_rule",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    bool_variables: ["needs_netd_direct_connect_rule"],
-    properties: ["cppflags"],
-}
-
-needs_netd_direct_connect_rule {
-    name: "needs_netd_direct_connect_rule_defaults",
-    soong_config_variables: {
-        needs_netd_direct_connect_rule: {
-            cppflags: ["-DNEEDS_NETD_DIRECT_CONNECT_RULE"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "legacy_hw_disk_encryption",
-    module_type: "cc_defaults",
-    config_namespace: "blazeQcomVars",
-    bool_variables: ["legacy_hw_disk_encryption"],
-    properties: ["cppflags"],
-}
-
-legacy_hw_disk_encryption {
-    name: "legacy_hw_disk_encryption_defaults",
-    soong_config_variables: {
-        legacy_hw_disk_encryption: {
-            cppflags: ["-DLEGACY_HW_DISK_ENCRYPTION"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "no_cameraserver",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    bool_variables: ["has_legacy_camera_hal1"],
-    properties: [
-        "cppflags",
-    ],
-}
-
-no_cameraserver {
-    name: "no_cameraserver_defaults",
-    soong_config_variables: {
-        has_legacy_camera_hal1: {
-            cppflags: [
-                "-DNO_CAMERA_SERVER",
-                "-Wno-overloaded-virtual",
-            ],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "camera_in_mediaserver",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    bool_variables: ["has_legacy_camera_hal1"],
-    properties: [
-        "overrides",
-        "shared_libs",
-    ],
-}
-
-camera_in_mediaserver {
-    name: "camera_in_mediaserver_defaults",
-    defaults: ["no_cameraserver_defaults"],
-    soong_config_variables: {
-        has_legacy_camera_hal1: {
-            overrides: ["cameraserver"],
-            shared_libs: [
-                "android.hardware.camera.common@1.0",
-                "android.hardware.camera.device@3.4",
-                "android.hardware.camera.provider@2.6",
-                "libcameraservice",
-                "libgui",
-            ],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "has_memfd_backport",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    bool_variables: ["has_memfd_backport"],
-    properties: ["cppflags"],
-}
-
-has_memfd_backport {
-    name: "has_memfd_backport_defaults",
-    soong_config_variables: {
-        has_memfd_backport: {
-            cppflags: ["-DHAS_MEMFD_BACKPORT"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "bootloader_message_offset",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    value_variables: ["bootloader_message_offset"],
-    properties: ["cflags"],
-}
-
-bootloader_message_offset {
-    name: "bootloader_message_offset_defaults",
-    soong_config_variables: {
-        bootloader_message_offset: {
-            cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "camera_parameter_library",
-    module_type: "cc_defaults",
-    config_namespace: "blazeGlobalVars",
-    value_variables: ["uses_camera_parameter_lib"],
-    properties: ["whole_static_libs"],
-}
-
-camera_parameter_library {
-    name: "camera_parameter_library_defaults",
-    soong_config_variables: {
-        uses_camera_parameter_lib: {
-            whole_static_libs: ["%s"],
         },
     },
 }
@@ -482,67 +313,6 @@ extended_compress_format {
 }
 
 soong_config_module_type {
-    name: "vold_hw_fde",
-    module_type: "cc_defaults",
-    config_namespace: "blazeQcomVars",
-    bool_variables: ["supports_hw_fde"],
-    properties: [
-        "cflags",
-        "header_libs",
-        "shared_libs",
-    ],
-}
-
-vold_hw_fde {
-    name: "vold_hw_fde_defaults",
-    soong_config_variables: {
-        supports_hw_fde: {
-            cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
-            header_libs: ["libcryptfs_hw_headers"],
-            shared_libs: ["libcryptfs_hw"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "vold_hw_fde_perf",
-    module_type: "cc_defaults",
-    config_namespace: "blazeQcomVars",
-    bool_variables: ["supports_hw_fde_perf"],
-    properties: [
-        "cflags",
-        "shared_libs",
-    ],
-}
-
-vold_hw_fde_perf {
-    name: "vold_hw_fde_perf_defaults",
-    soong_config_variables: {
-        supports_hw_fde_perf: {
-            cflags: ["-DCONFIG_HW_DISK_ENCRYPT_PERF"],
-            shared_libs: ["libcryptfs_hw"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "qti_cryptfshw_qsee",
-    module_type: "cc_defaults",
-    config_namespace: "blazeQcomVars",
-    bool_variables: ["should_wait_for_qsee"],
-    properties: ["cflags"],
-}
-
-qti_cryptfshw_qsee {
-    name: "qti_cryptfshw_qsee_defaults",
-    soong_config_variables: {
-        should_wait_for_qsee: {
-            cflags: ["-DWAIT_FOR_QSEE"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "surfaceflinger_qcom_extensions",
     module_type: "cc_defaults",
     config_namespace: "blazeQcomVars",
@@ -563,22 +333,6 @@ surfaceflinger_qcom_extensions {
     },
 }
 
-soong_config_module_type {
-    name: "stagefright_qcom_legacy",
-    module_type: "cc_defaults",
-    config_namespace: "blazeQcomVars",
-    bool_variables: ["uses_qcom_bsp_legacy"],
-    properties: ["cppflags"],
-}
-
-stagefright_qcom_legacy {
-    name: "stagefright_qcom_legacy_defaults",
-    soong_config_variables: {
-        uses_qcom_bsp_legacy: {
-            cppflags: ["-DQCOM_BSP_LEGACY"],
-        },
-    },
-}
 soong_config_module_type {
     name: "inputdispatcher_skip_event_key",
     module_type: "cc_defaults",
