@@ -120,7 +120,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 $(call inherit-product, vendor/PixelLauncherExtended/PixelLauncher.mk)
-    ICONS_VARIANT := true
+    ICONS_VARIANT := teamfilesicons
 endif
 
 # Optimize everything for preopt
