@@ -1,8 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.blaze.udfps.animations"
-          android:versionCode="1"
-          android:versionName="1.0">
-    <application
-          android:label="Udfps Animations"
-          android:hasCode="false"/>
-</manifest>
