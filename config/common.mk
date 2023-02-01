@@ -240,6 +240,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.alarm_alert=MorningAlarm.ogg
 
 # UDFPS Animations
+EXTRA_UDFPS_ANIMATIONS ?= false
 ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
     UdfpsResources
