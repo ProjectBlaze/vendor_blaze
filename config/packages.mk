@@ -1,6 +1,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
-    TouchGestures
+    TouchGestures \
+    Aperture
 
 # GameSpace
 PRODUCT_PACKAGES += \
