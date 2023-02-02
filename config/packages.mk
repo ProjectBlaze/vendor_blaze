@@ -11,4 +11,4 @@ PRODUCT_PACKAGES += \
 
 # Combined icons
 PRODUCT_PACKAGES += \
-    CombinedIconsOverlay
+    NoCombinedIconsOverlay
