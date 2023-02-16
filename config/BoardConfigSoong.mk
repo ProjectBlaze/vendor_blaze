@@ -36,7 +36,8 @@ SOONG_CONFIG_blazeGlobalVars += \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
-    target_surfaceflinger_udfps_lib
+    target_surfaceflinger_udfps_lib \
+    uses_legacy_fd_fbdev
 
 SOONG_CONFIG_NAMESPACES += blazeNvidiaVars
 SOONG_CONFIG_blazeNvidiaVars += \
@@ -63,6 +64,7 @@ SOONG_CONFIG_blazeQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DE
 SOONG_CONFIG_blazeGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_blazeGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_blazeGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
+SOONG_CONFIG_blazeGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
