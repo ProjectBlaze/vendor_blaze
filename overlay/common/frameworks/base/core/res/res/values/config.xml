@@ -152,4 +152,9 @@
              2 - MODE_NIGHT_YES
     -->
     <integer name="config_defaultNightMode">2</integer>
+
+
+    <!-- The type of the light sensor to be used by the display framework for things like
+         auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
+    <string name="config_displayLightSensorType" translatable="false">android.sensor.light</string>
 </resources>
