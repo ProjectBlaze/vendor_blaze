@@ -353,7 +353,7 @@ inputdispatcher_skip_event_key {
 soong_config_module_type {
     name: "uses_legacy_fd_fbdev",
     module_type: "cc_defaults",
-    config_namespace: "BlazeGlobalVars",
+    config_namespace: "blazeGlobalVars",
     bool_variables: ["uses_legacy_fd_fbdev"],
     properties: ["cppflags"],
 }
@@ -363,6 +363,22 @@ uses_legacy_fd_fbdev {
     soong_config_variables: {
         uses_legacy_fd_fbdev: {
             cppflags: ["-DUSES_LEGACY_FD_FBDEV"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "needs_oplus_tag",
+    module_type: "cc_defaults",
+    config_namespace: "blazeGlobalVars",
+    bool_variables: ["needs_oplus_tag"],
+    properties: ["cppflags"],
+}
+needs_oplus_tag {
+    name: "needs_oplus_vendor_tag",
+    soong_config_variables: {
+        needs_oplus_tag: {
+            cppflags: ["-DNEEDS_OPLUS_VENDOR_TAG"],
         },
     },
 }

@@ -37,7 +37,8 @@ SOONG_CONFIG_blazeGlobalVars += \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
     target_surfaceflinger_udfps_lib \
-    uses_legacy_fd_fbdev
+    uses_legacy_fd_fbdev \
+    needs_oplus_tag
 
 SOONG_CONFIG_NAMESPACES += blazeNvidiaVars
 SOONG_CONFIG_blazeNvidiaVars += \
@@ -58,6 +59,7 @@ endif
 # Soong bool variables
 SOONG_CONFIG_blazeGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_blazeNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
+SOONG_CONFIG_blazeGlobalVars_needs_oplus_tag := $(TARGET_NEEDS_OPLUS_VENDOR_TAG)
 SOONG_CONFIG_blazeQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_blazeQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_blazeQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
