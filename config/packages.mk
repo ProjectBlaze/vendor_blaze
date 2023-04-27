@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     Aperture \
     ThemePicker \
+    ThemesStub \
     WeatherIcons \
     TouchGestures \
     RepainterServicePriv
