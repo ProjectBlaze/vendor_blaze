@@ -48,7 +48,8 @@ SOONG_CONFIG_blazeGlobalVars += \
     target_trust_usb_control_disable \
     uses_egl_display_array \
     uses_legacy_fd_fbdev \
-    needs_oplus_tag
+    needs_oplus_tag \
+    uses_oppo_camera
 
 SOONG_CONFIG_NAMESPACES += blazeNvidiaVars
 SOONG_CONFIG_blazeNvidiaVars += \
@@ -71,6 +72,7 @@ SOONG_CONFIG_blazeGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLO
 SOONG_CONFIG_blazeGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_blazeNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_blazeGlobalVars_needs_oplus_tag := $(TARGET_NEEDS_OPLUS_VENDOR_TAG)
+SOONG_CONFIG_blazeGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_blazeQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_blazeQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_blazeGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
