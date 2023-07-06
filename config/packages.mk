@@ -10,6 +10,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GameSpace
 
+# ParallelSpace
+PRODUCT_PACKAGES += \
+    ParallelSpace
+
 # Combined icons
 PRODUCT_PACKAGES += \
     NoCombinedIconsOverlay
