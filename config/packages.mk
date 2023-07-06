@@ -11,6 +11,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GameSpace
 
+# ParallelSpace
+PRODUCT_PACKAGES += \
+    ParallelSpace
+    
 # OmniJaws
 PRODUCT_PACKAGES += \
     OmniJaws
