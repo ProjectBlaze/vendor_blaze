@@ -215,3 +215,6 @@ include vendor/blaze/config/version.mk
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.ringtone=vibe.ogg \
     ro.config.alarm_alert=MorningAlarm.ogg
+
+# Packages
+include vendor/blaze/config/packages.mk
