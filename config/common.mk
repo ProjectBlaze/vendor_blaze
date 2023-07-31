@@ -244,3 +244,6 @@ ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
     UdfpsResources
 endif
+
+# Packages
+include vendor/blaze/config/packages.mk
