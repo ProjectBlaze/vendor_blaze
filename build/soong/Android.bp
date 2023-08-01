@@ -1,4 +1,4 @@
-// LineageOS soong configs
+// ProjectBlaze soong configs
 
 bootstrap_go_package {
     name: "soong-blaze-generator",
@@ -475,6 +475,23 @@ camera_needs_camera_needs_depth_sensor_override {
     soong_config_variables: {
         camera_needs_camera_needs_depth_sensor_override: {
             cppflags: ["-DCAMERA_NEEDS_CAMERA_NEEDS_DEPTH_SENSOR_OVERRIDE"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "needs_camera_boottime",
+    module_type: "cc_defaults",
+    config_namespace: "blazeGlobalVars",
+    bool_variables: ["needs_camera_boottime"],
+    properties: ["cppflags"],
+}
+
+needs_camera_boottime {
+    name: "needs_camera_boottime_defaults",
+    soong_config_variables: {
+        needs_camera_boottime: {
+            cppflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
         },
     },
 }
