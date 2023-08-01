@@ -56,6 +56,7 @@ SOONG_CONFIG_blazeGlobalVars += \
     uses_oplus_camera \
     uses_nothing_camera \
     needs_camera_boottime \
+    camera_needs_client_info_lib \
 
 SOONG_CONFIG_NAMESPACES += blazeNvidiaVars
 SOONG_CONFIG_blazeNvidiaVars += \
@@ -93,6 +94,7 @@ SOONG_CONFIG_blazeGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBD
 SOONG_CONFIG_blazeGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_blazeGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_blazeGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
+SOONG_CONFIG_blazeGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
