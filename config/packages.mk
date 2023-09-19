@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     ThemesStub \
     TouchGestures \
+    BlazeWallpaperStub \
     Aperture
 
 # GameSpace
