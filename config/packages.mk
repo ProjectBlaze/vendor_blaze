@@ -4,7 +4,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     ThemesStub \
     TouchGestures \
-    RepainterServicePriv
+    RepainterServicePriv \
+    BlazeWallpaperStub
 
 # GameSpace
 PRODUCT_PACKAGES += \
