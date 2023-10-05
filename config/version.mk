@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ANDROID_VERSION := 13
-BLAZEVERSION := v2.8
+ANDROID_VERSION := 14
+BLAZEVERSION := V3.0-UNEARTH
 
 BLAZE_BUILD_TYPE ?= UNOFFICIAL
 BLAZE_MAINTAINER ?= UNKNOWN
