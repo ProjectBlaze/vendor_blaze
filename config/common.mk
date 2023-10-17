@@ -225,6 +225,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.wm.enable_remote_keyguard_animation=0
 
+# Clocks
+$(call inherit-product, vendor/blaze/config/clocks.mk)
+
 # Clean up packages cache to avoid wrong strings and resources
 PRODUCT_COPY_FILES += \
     vendor/blaze/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
