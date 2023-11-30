@@ -107,6 +107,8 @@ PRODUCT_COPY_FILES += \
 
 # Face Unlock
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
+TARGET_FACE_UNLOCK_SUPPORTED ?= true
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     FaceUnlock
 
@@ -126,6 +128,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/lib64/libMegviiUnlock.so \
     system/lib64/libmegface.so \
     system/priv-app/FaceUnlock/FaceUnlock.apk
+endif
 endif
 
 # Enforce privapp-permissions whitelist
