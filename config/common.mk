@@ -218,6 +218,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
+    AndroidBlackThemeOverlay \
     NetworkStackOverlay
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
