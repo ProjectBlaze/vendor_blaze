@@ -263,3 +263,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 # Packages
 include vendor/blaze/config/packages.mk
+
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
