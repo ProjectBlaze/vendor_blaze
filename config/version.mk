@@ -17,11 +17,11 @@ BLAZEVERSION := V3.0-UNEARTH
 
 BLAZE_BUILD_TYPE ?= UNOFFICIAL
 BLAZE_MAINTAINER ?= UNKNOWN
-BLAZE_DATE_YEAR := $(shell date -u +%Y)
-BLAZE_DATE_MONTH := $(shell date -u +%m)
-BLAZE_DATE_DAY := $(shell date -u +%d)
-BLAZE_DATE_HOUR := $(shell date -u +%H)
-BLAZE_DATE_MINUTE := $(shell date -u +%M)
+BLAZE_DATE_YEAR := $(shell TZ=IST-5:30 date +%Y)
+BLAZE_DATE_MONTH := $(shell TZ=IST-5:30 date +%m)
+BLAZE_DATE_DAY := $(shell TZ=IST-5:30 date +%d)
+BLAZE_DATE_HOUR := $(shell TZ=IST-5:30 date +%H)
+BLAZE_DATE_MINUTE := $(shell TZ=IST-5:30 date +%M)
 BLAZE_BUILD_DATE := $(BLAZE_DATE_YEAR)$(BLAZE_DATE_MONTH)$(BLAZE_DATE_DAY)-$(BLAZE_DATE_HOUR)$(BLAZE_DATE_MINUTE)
 TARGET_PRODUCT_SHORT := $(subst blaze_,,$(BLAZE_BUILD))
 
