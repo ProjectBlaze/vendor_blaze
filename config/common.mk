@@ -109,6 +109,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
+# Clocks
+$(call inherit-product, vendor/SystemUIClocks/clocks.mk)
+
 # Gapps
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
