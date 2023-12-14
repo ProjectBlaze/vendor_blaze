@@ -147,8 +147,8 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_l=4 \
     ro.com.google.ime.kb_pad_port_r=4 \
-    ro.com.google.ime.kb_pad_land_l=64 \
-    ro.com.google.ime.kb_pad_land_r=64
+    ro.com.google.ime.kb_pad_land_l=32 \
+    ro.com.google.ime.kb_pad_land_r=32
 
 # Google Photos Pixel Exclusive XML
 PRODUCT_COPY_FILES += \

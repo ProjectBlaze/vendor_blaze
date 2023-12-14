@@ -22,6 +22,17 @@
     <string-array name="config_pluginAllowlist" translatable="false">
         <item>com.android.systemui</item>
         <item>com.android.systemui.plugin.globalactions.wallet</item>
+        <item>com.android.systemui.clocks</item>
+        <item>com.android.systemui.clocks.debug</item>
+        <item>com.android.systemui.clocks.bignum</item>
+        <item>com.android.systemui.clocks.calligraphy</item>
+        <item>com.android.systemui.clocks.flex</item>
+        <item>com.android.systemui.clocks.growth</item>
+        <item>com.android.systemui.clocks.handwritten</item>
+        <item>com.android.systemui.clocks.inflate</item>
+        <item>com.android.systemui.clocks.metro</item>
+        <item>com.android.systemui.clocks.numoverlap</item>
+        <item>com.android.systemui.clocks.weather</item>
         <item>org.lineageos.settings.device</item>
     </string-array>
 
@@ -44,4 +55,12 @@
     <!-- Whether or not long-pressing on keyguard will display to customize lockscreen -->
     <bool name="long_press_keyguard_customize_lockscreen_enabled">true</bool>
 
+    <!-- Launcher package name for overlaying icons. -->
+    <string name="launcher_overlayable_package" translatable="false">com.google.android.apps.nexuslauncher</string>
+
+    <!-- ThemePicker package name for overlaying icons. -->
+    <string name="themepicker_overlayable_package" translatable="false">com.google.android.apps.wallpaper</string>
+
+    <!-- Package name for the app that implements the wallpaper picker. -->
+    <string name="config_wallpaperPickerPackage" translatable="false">com.google.android.apps.wallpaper</string>
 </resources>
