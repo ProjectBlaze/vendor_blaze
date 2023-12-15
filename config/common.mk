@@ -138,6 +138,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Clocks
 $(call inherit-product, vendor/SystemUIClocks/clocks.mk)
 
+# Certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
 # Gapps
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
