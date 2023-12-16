@@ -135,9 +135,6 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
-# Clocks
-$(call inherit-product, vendor/SystemUIClocks/clocks.mk)
-
 # Certification
 $(call inherit-product-if-exists, vendor/certification/config.mk)
 
