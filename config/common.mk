@@ -171,6 +171,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/blaze/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
 
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
+
 # rsync
 PRODUCT_PACKAGES += \
     rsync
