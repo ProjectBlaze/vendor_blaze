@@ -283,3 +283,5 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_PACKAGES += \
     Aperture \
     BlazeWallpaperStub
+
+include vendor/blaze/config/pixel_props.mk
