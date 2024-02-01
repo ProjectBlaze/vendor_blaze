@@ -229,3 +229,8 @@ include vendor/blaze/config/version.mk
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.ringtone=vibe.ogg \
     ro.config.alarm_alert=MorningAlarm.ogg
+
+# Required packages
+PRODUCT_PACKAGES += \
+    Aperture \
+    BlazeWallpaperStub
