@@ -691,4 +691,20 @@
 
     <!-- The name of the package that will hold the wellbeing role. -->
     <string name="config_systemWellbeing" translatable="false">com.google.android.apps.wellbeing</string>
+
+    <!-- Build properties from a GMS certified device -->
+    <string-array name="config_certifiedBuildProperties" translatable="false">
+        <item>Hisense</item> <!-- Build.BRAND -->
+        <item>Hisense</item> <!-- Build.MANUFACTURER -->
+        <item></item> <!-- Build.ID -->
+        <item>HS6735MT</item> <!-- Build.DEVICE -->
+        <item>F30</item> <!-- Build.PRODUCT -->
+        <item>Hisense F30</item> <!-- Build.MODEL -->
+        <item>Hisense/F30/HS6735MT:6.0/MRA58K/L1228.6.01.01:user/release-keys</item> <!-- Build.FINGERPRINT -->
+        <item></item> <!-- Build.TYPE -->
+        <item></item> <!-- Build.TAGS -->
+        <item>2016-02-01</item> <!-- Build.SECURITY_PATCH -->
+        <item></item> <!-- Build.DEVICE_INITIAL_SDK_INT -->
+    </string-array>
+
 </resources>
