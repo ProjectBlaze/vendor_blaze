@@ -289,3 +289,4 @@ PRODUCT_PACKAGES += \
     BlazeWallpaperStub
 
 include vendor/blaze/config/pixel_props.mk
+include vendor/blaze/config/packages.mk
