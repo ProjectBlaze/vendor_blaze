@@ -27,7 +27,7 @@ TARGET_PRODUCT_SHORT := $(subst blaze_,,$(BLAZE_BUILD))
 
 # OFFICIAL_DEVICES
 ifeq ($(BLAZE_BUILD_TYPE), OFFICIAL)
-  LIST = $(shell cat vendor/blaze/blaze.devices)
+  LIST = $(shell cat vendor/blaze/config/blaze.devices)
     ifeq ($(filter $(BLAZE_BUILD), $(LIST)), $(BLAZE_BUILD))
       IS_OFFICIAL=true
       BLAZE_BUILD_TYPE := OFFICIAL
