@@ -55,7 +55,8 @@ SOONG_CONFIG_blazeGlobalVars += \
     uses_egl_display_array \
     uses_legacy_fd_fbdev \
     uses_oplus_camera \
-    needs_camera_boottime
+    needs_camera_boottime \
+    target_camera_package_name
 
 SOONG_CONFIG_NAMESPACES += blazeNvidiaVars
 SOONG_CONFIG_blazeNvidiaVars += \
@@ -89,6 +90,7 @@ SOONG_CONFIG_blazeGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBD
 SOONG_CONFIG_blazeGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_blazeGlobalVars_sdmcore_has_is_display_hw_available_func := $(TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC)
 SOONG_CONFIG_blazeGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
+SOONG_CONFIG_blazeGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
